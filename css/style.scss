@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+$blue-100A: #FDFDFF;
+$blue-100: #F9FCFE;
+$blue-500: #42A5F5;
+$blue-600: #F9FAFF;
+
+$red-500: #F44336;
+$purple-500: #811EFF;
+$orange-500: #FFA51E;
+
+$grey-100: #FAFAFA;
+$grey-500: #D9D9D9;
+
+$dark-100: #C3C3C3;
+$dark-200: #A4A4A4;
+$dark-300: #4B4B4B;
+$dark-500: #232323;
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $dark-500;
+    background-color: $blue-600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.page-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: $blue-500;
+    margin-bottom: 17px;
+}
+
+.btn-filter,
+.btn-blue-white {
+    text-transform: capitalize;
+}
+
+
+
+.btn.btn-filter {
+    color: $dark-100;
+    background: transparent;
+    border: 1px solid $grey-500;
+    transition: all .3s ease-in-out;
+    &:focus,
+    &:active,
+    &:hover {
+        color: $dark-500;
+        border: 1px solid $dark-500;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.btn-filter svg {
+    stroke: $grey-500;
+    transition: all .3s ease-in-out;
+}
+
+.btn-filter:active svg,
+.btn-filter:focus svg,
+.btn-filter:hover  svg {
+    stroke: $dark-500;
+}
+
+.btn-blue-white {
+    color: #fff;
+    background: $blue-500;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+
+    &:focus,
+    &:active,
+    &:hover {
+        color: $blue-500;
+        background: transparent;
+        border: 1px solid $blue-500;
+        outline: none;
+    }
+}
+
+.cashback-item {
+    background-color: #fff;
+    border-radius: 23px;
+    padding: 20px;
+}
+
+.cashback-item__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+
+}
+
+
+.page-description {
+    max-width: 730px;
+}
+
+.statistics-filter__item-text {
+    text-transform: uppercase;
+}
+
+.cashback-item.statistics {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.statistics-filter,
+.statistics-feedback {
+    flex: 1;
+
+}
+
+.cashback-item.statistics,
+.cashback-item.totals {
+    height: 390px;
+}
+
+.statistics-filter {
+    border-left: 1px solid $grey-500;
+    padding-left: 15px;
+}
+
+
+
+.statistics-filter__item-header,
+.statistics-filter__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics-filter__header {
+    position: fixed;
+    top: 0;
+
+    align-items: center;
+    border-bottom: 1px solid $grey-500;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+
+.totals__list,
+.statistics-filter__list {
+    list-style: none;
+    padding: 0;
+}
+
+
+.statistics-feedback-note {
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-100;
+    border-top: 1px solid $grey-500;
+    padding: 15px 0;
+    padding-right: 15px;
+}
+
+
+.statistics-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.statistics-feedback svg {
+    display: inherit;
+    align-self: center;
+}
+
+
+.statistics-filter__list-item .progress {
+    height: 2px;
+}
+
+
+.statistics-filter__item-value,
+.statistics-filter__item-text {
+    font-size: 14px;
+}
+
+.totals__item-body-value,
+.statistics-filter__item-value {
+    font-weight: 700;
+}
+
+
+
+.totals__list {
+    margin-bottom: 39px;
+}
+
+
+
+.totals__item-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+    width: 46px;
+    height: 46px;
+
+    margin-right: 13px;
+    background: $blue-100;
+}
+
+.report-header,
+.totals__item-body,
+.totals__list-item {
+    display: flex;
+    align-items: center;
+}
+
+.report-header,
+.totals__item-body {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.totals__item-body-text,
+.totals__item-body-value {
+    margin-bottom: 0;
+}
+
+.totals__list-item:not(:last-child) {
+    margin-bottom: 20px;
+    border-bottom: 1px solid $grey-500;
+    padding-bottom: 15px;
+}
+
+
+.report-table {
+    width: 100%;
+    border-top: 1px solid $grey-500;
+}
+
+.report-table__header tr {
+    border-bottom: 1px solid $grey-500;
+}
+
+.report-table__body tr {
+    border-bottom: 1px solid $grey-100;
+}
+
+.report-table__header tr th:not(:last-child),
+.report-table tr td:not(:last-child) {
+    border-right: 1px solid $grey-500;
+}
+
+.report-table tr:nth-child(2n) {
+    background: $blue-100A;
+}
+
+
+
+.report-table__header tr th,
+.report-table__body tr td {
+    padding: 15px 30px;
+}
+
+.total-statistics {
+    margin-bottom: 6px;
+}
+
+
+.report-header .cashback-item__title {
+    margin-bottom: 0;
+}
+
+.report-header {
+    margin-bottom: 25px;
+}
+
+
+
+.p-6 {
+    padding: 6px;
+}
+
+
+.filter {
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0px 7px 20px -5px rgba(9, 19, 69, 0.1);
+    border-radius: 9px;
+}
+
+.statistics-filter__header {
+    position: relative;
+}
+
+.filter-dropdown {
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 0px;
+
+    background: #FFFFFF;
+    box-shadow: -10px 19px 50px -10px rgba(9, 19, 69, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+    width: 100%;
+    min-height: 280px;
+}
+
+.filter-dropdown.show {
+    display: block;
+}
+
+.filter-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 53px;
+    height: 43px;
+
+}
+
+.filter-control {
+    border: none;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+        border: none;
+        outline: none;
+    }
+}
+
+.filter-control::placeholder {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.chart-container {
+    position: relative;
+    display: flex;
+    align-self: center;
+    width: 174px;
+    height: 174px;
+}
+
+
+
+.statistics-filter-wrapper {
+    overflow-y: auto;
+    height: 80%;
+}
+
+
+
+  .statistics-filter-wrapper::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgb(238, 238, 238); 
+  }
+  
+  .statistics-filter-wrapper::-webkit-scrollbar-thumb {
+    background: #000;
+    height: 10px;
+    width: 2px;
+  }
