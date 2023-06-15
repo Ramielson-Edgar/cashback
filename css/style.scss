@@ -354,6 +354,7 @@ h4 {
 }
 
 
+
 .filter-dropdown.show {
     display: block;
 }
@@ -446,62 +447,9 @@ h4 {
 
 
 @media (max-width:991.98px) {
-    // .report-table-wrapper {
-    //     overflow-y: hidden;
-    //     border-top: 1px solid $grey-500;
-    //     width: 100%;
-    // }
 
-    // .report-table {
-    //     display: none;
-    // }
-
- 
-    // .report-list {
-    //     display: flex;
-    //     list-style: none;
-    //     justify-content: space-between;
-    //     padding: 0;
-       
-    // }
-
-    // .report-list__item-list {
-    //     list-style: none;
-    //     padding: 0;
-    // }
-
-    // .report-list__item:not(:last-child) .report-list__item-list {
-    //     border-right: 1px solid $grey-500;
-    // }
-
-    // .report-list__item .report-list__item-list .report-list__item-list-item {
-    //     border-bottom: 1px solid $grey-100;
-    // }
-
-    // .report-list__item-list .report-list__item-list-item:first-child {
-    //     border-bottom: 1px solid $grey-500;
-    // }
-
-    // .report-list__item-list-text {
-    //     font-size: 13px;
-    //     line-height: 20px;
-    //     padding: 10px;
-    //     margin-bottom: 0;
-    // }
-
-    // //table column control//
-    // .report-list__item-list {
-    //   display: grid;
-    //   grid-template-columns: 120px;
-    //   grid-template-rows: 60px;
-    // }
-
-
-    //  .cashback-item__title {
-    //     font-size: 16px;
-    // }
-    
-    .report-table__header tr th, .report-table__body tr td {
+    .report-table__header tr th,
+    .report-table__body tr td {
         font-size: 14px;
         line-height: 20px;
         padding: 10px 20px;
@@ -510,7 +458,7 @@ h4 {
 
 
 @media (max-width:767.98px) {
-    
+
     .report-table-wrapper {
         overflow-y: hidden;
     }
@@ -518,7 +466,7 @@ h4 {
     .report-table__header tr th {
         white-space: nowrap;
     }
- 
+
 }
 
 
@@ -528,7 +476,7 @@ h4 {
         margin-bottom: 10px;
     }
 
-   .cashback-item.totals .btn-lg {
+    .cashback-item.totals .btn-lg {
         font-size: 14px;
         padding: 10px;
     }
@@ -561,6 +509,21 @@ h4 {
     .statistics-filter {
         padding-left: 0;
         border-left: unset;
+    }
+
+
+    .totals__item-body-value,
+    .totals__item-body-text {
+        font-size: 13px;
+    }
+
+    .cashback-item__title {
+        font-size: 16px;
+    }
+
+
+    .filter-dropdown {
+        min-height: 230px;
     }
 
 }
