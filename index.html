@@ -44,6 +44,7 @@
 
                     <div class="statistics-filter">
                         <div class="statistics-filter__header">
+
                             <h4 class="statistics-filter__title">Instruments</h4>
                             <button class="btn btn-filter" type="button">
                                 <svg width="15" height="11">
@@ -52,23 +53,22 @@
                                 Filter
                             </button>
 
-                            <div class="filter-dropdown">
-                                <div class="filter">
-                                    <span class="filter-icon">
-                                        <svg width="19" height="19">
-                                            <use href="./icons/sprite.svg#icon-search"></use>
-                                        </svg>
-                                    </span>
-                                    <input type="text" class="filter-control" placeholder="type instruments...">
 
-                                </div>
-                                <hr>
-                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <span class="filter-icon">
+                                <svg width="19" height="19">
+                                    <use href="./icons/sprite.svg#icon-search"></use>
+                                </svg>
+                            </span>
+                            <input type="text" class="filter-control">
                         </div>
 
 
 
                         <div class="statistics-filter-wrapper">
+
                             <ul class="statistics-filter__list">
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
@@ -79,7 +79,7 @@
                                     <div class="progress">
                                         <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
                                             aria-valuemax="100">
-                                        
+
                                         </div>
                                     </div>
                                 </li>
@@ -92,7 +92,7 @@
 
                                     <div class="progress">
                                         <div id="forex" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100" >
+                                            aria-valuemax="100">
                                             <span class="sr-only">60% Complete</span>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@
                                 </li>
 
                                 <li class="statistics-filter__list-item">
-                                    <div  class="statistics-filter__item-header">
+                                    <div class="statistics-filter__item-header">
                                         <p class="statistics-filter__item-text">Salona</p>
                                         <p class="statistics-filter__item-value">45%</p>
                                     </div>
@@ -116,7 +116,7 @@
 
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
-                                        <p   class="statistics-filter__item-text">Twitter</p>
+                                        <p class="statistics-filter__item-text">Twitter</p>
                                         <p class="statistics-filter__item-value">15%</p>
                                     </div>
                                     <div class="progress">
@@ -142,7 +142,8 @@
 
                                 </li>
 
-                                
+
+
 
                         </div>
 
@@ -233,56 +234,56 @@
 
                     <div class="report-table-wrapper">
 
-                        <table class="report-table">
-                            <thead class="report-table__header">
+                        <table class="report-table sortable">
+                            <thead data-header="true" class="report-table__header">
                                 <tr>
-                                    <th>Order</th>
-                                    <th>Open time</th>
-                                    <th>Type</th>
-                                    <th>Symbol</th>
-                                    <th>Open Price</th>
-                                    <th>Close Price</th>
-                                    <th>Rebate Commissions</th>
+                                    <th data-sort-column="true">Order</th>
+                                    <th data-sort-column="true">Open time</th>
+                                    <th data-sort-column="true">Type</th>
+                                    <th data-sort-column="true">Symbol</th>
+                                    <th data-sort-column="true">Open Price</th>
+                                    <th data-sort-column="true">Close Price</th>
+                                    <th data-sort-column="true">Rebate Commissions</th>
                                 </tr>
 
                             </thead>
 
-                            <tbody class="report-table__body">
+                            <tbody data-body="true" class="report-table__body">
                                 <tr>
-                                    <td>#39057</td>
-                                    <td>16:43</td>
+                                    <td data-sort-value="#39057">#39057</td>
+                                    <td>12:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
                                     <td>16.50</td>
-                                    <td>17.03</td>
-                                    <td>$2.5</td>
+                                    <td>457.03</td>
+                                    <td>$68.5</td>
                                 </tr>
                                 <tr>
-                                    <td>#39057</td>
-                                    <td>16:43</td>
+                                    <td data-sort-value="#39058">#39058</td>
+                                    <td>14:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
                                     <td>16.50</td>
-                                    <td>17.03</td>
-                                    <td>$2.5</td>
+                                    <td>67.03</td>
+                                    <td>$54.5</td>
                                 </tr>
                                 <tr>
-                                    <td>#39057</td>
-                                    <td>16:43</td>
+                                    <td data-sort-value="#39059">#39059</td>
+                                    <td>15:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
-                                    <td>16.50</td>
-                                    <td>17.03</td>
-                                    <td>$2.5</td>
+                                    <td>32.50</td>
+                                    <td>21.03</td>
+                                    <td>$24.5</td>
                                 </tr>
                                 <tr>
-                                    <td>#39057</td>
-                                    <td>16:43</td>
+                                    <td data-sort-value="#390510">#390510</td>
+                                    <td>89:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
-                                    <td>16.50</td>
-                                    <td>17.03</td>
-                                    <td>$2.5</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -302,6 +303,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+
+    <script src="/js/jquery.sortable.js"></script>
+    <!-- <script src="/js/sort.js"></script> -->
     <script src="js/cashback.js"></script>
 
     <script>
@@ -333,10 +337,10 @@
                     data: 50,
                 },
                 {
-                    id:5,
-                    label:"gold",
-                    category:"metals",
-                    data:120
+                    id: 5,
+                    label: "gold",
+                    category: "metals",
+                    data: 120
                 }
             ]
 
@@ -350,25 +354,25 @@
                 // if (Number(data[i]) >= 70) el.style.backgroundColor = "#811EFF"
                 // if (Number(data[i]) >= 40 && Number(data[i]) < 70) el.style.backgroundColor = "#42A5F5"
                 // if (Number(data[i]) < 30) el.style.backgroundColor = "#FFA51E"
-                
+
 
                 //render dependent from id
                 const category = entriesData.map(data => data.category)
                 const percentages = entriesData.map(data => data.data)
                 el.style.width = `${Number(percentages[i])}%`
-                console.log(percentages)
 
-                if (category.includes('crypto') && el.id === "crypto" ) {
+
+                if (category.includes('crypto') && el.id === "crypto") {
                     el.style.backgroundColor = "#F44336"
                 }
 
-                if (category.includes('indices')&& el.id === "indices") {
+                if (category.includes('indices') && el.id === "indices") {
                     el.style.backgroundColor = "#811EFF"
                 }
 
                 if (category.includes('forex') && el.id === "forex") {
                     el.style.backgroundColor = "#FFA51E"
-                }  
+                }
 
                 if (category.includes('shares') && el.id === "shares") {
                     el.style.backgroundColor = "#42A5F5"
@@ -379,7 +383,7 @@
                 }
 
             })
- 
+
 
             var ctx = document.getElementById('statistics-chart').getContext('2d');
             var chart = new Chart(ctx, {
@@ -434,6 +438,9 @@
         })()
 
 
+        $(function () {
+            $('.sortable').sortable();
+        });
 
 
     </script>
