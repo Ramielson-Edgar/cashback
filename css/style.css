@@ -243,6 +243,14 @@ h4 {
   background: #FDFDFF;
 }
 
+.report-table-wrapper {
+  overflow-y: hidden;
+}
+
+.report-table__header tr th {
+  white-space: nowrap;
+}
+
 .report-table__header tr th,
 .report-table__body tr td {
   padding: 10px 20px;
@@ -387,14 +395,6 @@ h4 {
     padding: 10px 20px;
   }
 }
-@media (max-width: 767.98px) {
-  .report-table-wrapper {
-    overflow-y: hidden;
-  }
-  .report-table__header tr th {
-    white-space: nowrap;
-  }
-}
 @media (max-width: 575.98px) {
   .page-title {
     font-size: 18px;
@@ -421,7 +421,7 @@ h4 {
     height: 100%;
   }
   .cashback-item.statistics {
-    height: 700px;
+    height: 740px;
   }
   .statistics-filter {
     padding-left: 0;

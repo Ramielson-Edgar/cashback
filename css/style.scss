@@ -299,7 +299,13 @@ h4 {
     background: $blue-100A;
 }
 
+.report-table-wrapper {
+    overflow-y: hidden;
+}
 
+.report-table__header tr th {
+    white-space: nowrap;
+}
 
 .report-table__header tr th,
 .report-table__body tr td {
@@ -457,18 +463,7 @@ h4 {
 }
 
 
-@media (max-width:767.98px) {
-
-    .report-table-wrapper {
-        overflow-y: hidden;
-    }
-
-    .report-table__header tr th {
-        white-space: nowrap;
-    }
-
-}
-
+ 
 
 @media (max-width:575.98px) {
     .page-title {
@@ -503,7 +498,7 @@ h4 {
     }
 
     .cashback-item.statistics {
-        height: 700px;
+        height: 740px;
     }
 
     .statistics-filter {
