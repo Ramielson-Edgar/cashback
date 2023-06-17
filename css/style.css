@@ -402,7 +402,7 @@ h4 {
     height: 100%;
   }
   .cashback-item.statistics {
-    min-height: 820px;
+    height: 820px;
   }
   .statistics-filter {
     padding-left: 0;
