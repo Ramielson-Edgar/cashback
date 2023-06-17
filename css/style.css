@@ -143,16 +143,30 @@ h4 {
   position: relative;
 }
 
+.filter-group.is-active .filter-icon {
+  transform: translate(0);
+}
+
+.filter-icon {
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+}
+
 .filter-group.is-active {
   display: flex;
+  width: 100%;
+  height: 45px;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 20px;
 }
 
 .filter-group {
-  display: none;
+  width: 0;
+  height: 0;
   align-items: center;
   border-radius: 9px;
-  border: 1px solid #dbdbdb;
-  margin-bottom: 20px;
+  background: #FEFEFE;
+  transition: all 0.3s ease-in-out;
 }
 
 .totals__list,
