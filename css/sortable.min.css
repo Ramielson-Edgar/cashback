@@ -6,12 +6,11 @@
     pointer-events: none
 }
 
- 
 
-.sortable th::after {
+/* .sortable th::after {
     margin-left: 3px;
     content: "▸"
-}
+} */
 
 .sortable th:hover::after {
     color: inherit
@@ -31,7 +30,7 @@
     content: ""
 }
 
-.sortable th.indicator-left::before {
+/* .sortable th.indicator-left::before {
     margin-right: 3px;
     content: "▸"
 }
@@ -48,11 +47,8 @@
 .sortable th.indicator-left.dir-u::before {
     color: inherit;
     content: "▴"
-}
+} */
  
- 
- 
-
 .sortable td,
 .sortable th {
     padding: 10px
