@@ -94,5 +94,11 @@ onChange = debounce(onChange, 500)
 
 document.querySelector('.filter-control').addEventListener('keyup', onChange)
 
+//active filter sort table//
 
+document.querySelector('.report-header .btn-filter').addEventListener("click",()=>{
+  const table = document.querySelector('.report-table')
+  table.classList.toggle('sortable')
+ 
+})
 
