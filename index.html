@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
+    <!-- <link rel="stylesheet" href="/css/test-table.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -114,7 +114,7 @@
                                     </div>
 
                                 </li>
-                                
+
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
                                         <p class="statistics-filter__item-text">s&p500</p>
@@ -129,22 +129,7 @@
                                     </div>
 
                                 </li>
-                                
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
 
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
                                         <p class="statistics-filter__item-text">s&p500</p>
@@ -174,7 +159,22 @@
                                     </div>
 
                                 </li>
-                            
+
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p class="statistics-filter__item-text">s&p500</p>
+                                        <p class="statistics-filter__item-value">15%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </li>
+
                             </ul>
 
                         </div>
@@ -239,7 +239,7 @@
 
                     <div class="report-table-wrapper">
 
-                        <table class="report-table table-sort ">
+                        <table class="report-table table-sort">
                             <thead class="report-table__header">
                                 <tr>
                                     <th>Order</th>
@@ -348,14 +348,15 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
+    <script src="/js/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/table-sort-js/table-sort.min.js"></script>
+    <script src="js/table-sort.js"></script>
     <script src="js/cashback.js"></script>
 
     <script>
@@ -517,7 +518,7 @@
 
         })()
 
-
+        $("#simpleTable").stupidtable();
 
     </script>
 </body>
