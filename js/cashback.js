@@ -8,7 +8,7 @@ const scrollContainer = document.querySelector('.statistics-filter-wrapper');
 button.addEventListener("click", () => {
     inputGroup.classList.toggle('is-active')
 
-    if (inputGroup.classList.contains('is-active')) {
+    if (inputGroup.classList.contains('is-active') && filterItem.length > 5) {
         filterList.style.paddingRight = "15px"
     }
 
@@ -22,7 +22,6 @@ button.addEventListener("click", () => {
     }
 
 
-
     scrollContainer.classList.toggle('is-active')
 
 })
@@ -34,21 +33,30 @@ if (filterItem.length > 6) {
 } else {
     filterList.style.paddingRight = "0"
 }
-// if(filterItem.length > 6 && !filterList.classList.contains('is-active')) {
-//     filterList.classList.add('is-active')
-// }  
-
 
 
 //correction on mobile// 
 if (window.innerWidth <= 575) {
 
     button.addEventListener("click", () => {
-        scrollContainer.classList.toggle('is-active')
+    if (inputGroup.classList.contains('is-active') && filterItem.length >= 5) {
+        filterList.style.paddingRight = "15px"
+    }
 
-        if (filterItem.length >= 6 && !inputGroup.classList.contains('is-active')) {
-            filterList.style.paddingRight = "15px"
-        }
+    if (filterItem.length >= 5 && inputGroup.classList.contains('is-active')) {
+        filterList.style.paddingRight = "15px"
+    }
+
+
+    if (filterItem.length === 6 && !inputGroup.classList.contains('is-active')) {
+        filterList.style.paddingRight = "15px"
+    }
+
+    
+    if (!inputGroup.classList.contains('is-active') && filterItem.length === 5 ) {
+        filterList.style.paddingRight = "0"
+    }
+
     })
 
     if (filterItem.length >= 6) {
@@ -57,9 +65,10 @@ if (window.innerWidth <= 575) {
         filterList.style.paddingRight = "0"
     }
 
+     
+
+
 }
-
-
 
 
 //debounce //
@@ -94,8 +103,8 @@ onChange = debounce(onChange, 500)
 
 document.querySelector('.filter-control').addEventListener('keyup', onChange)
 
-//active filter sort table//
 
+//active filter sort table//
 document.querySelector('.report-header .btn-filter').addEventListener("click",()=>{
   const table = document.querySelector('.report-table')
   table.classList.toggle('sortable')

@@ -14,56 +14,13 @@
     content: "";
     
     margin-left: 15px;
-    background: url('../icons/arrow-down-up.svg');
+    background: url("../icons/arrow-down-up.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
-/* 
-.sortable th.dir-u::after,
-.sortable th.dir-d::after {
-    width: 12px;
-    height: 12px;
-    content: "";
-    background: url('../icons/arrow-down-up.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
- 
-}
-
-.sortable th.dir-u::after {
-    background: url('../icons/arrow-up-down.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
-
-/* .sortable th.indicator-left::after {
-    content: ""
-} */
-/* 
-.sortable th.indicator-left::before {
-    margin-right: 3px;
-    content: "▸"
-}
-
-.sortable th.indicator-left:hover::before {
-    color: inherit
-}
-
-.sortable th.indicator-left.dir-d::before {
-    color: inherit;
-    content: "▾"
-}
-
-.sortable th.indicator-left.dir-u::before {
-    color: inherit;
-    content: "▴"
-} */
  
 .sortable td,
 .sortable th {
