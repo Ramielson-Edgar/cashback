@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/sortable.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -114,8 +113,8 @@
                                     </div>
 
                                 </li>
- 
-                          
+
+
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
                                         <p class="statistics-filter__item-text">s&p500</p>
@@ -130,10 +129,10 @@
                                     </div>
 
                                 </li>
- 
-                          
-                            
-                             
+
+
+
+
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
                                         <p class="statistics-filter__item-text">s&p500</p>
@@ -148,7 +147,7 @@
                                     </div>
 
                                 </li>
- 
+
                                 <li class="statistics-filter__list-item">
                                     <div class="statistics-filter__item-header">
                                         <p class="statistics-filter__item-text">s&p500</p>
@@ -163,7 +162,7 @@
                                     </div>
 
                                 </li>
-                            
+
 
                             </ul>
 
@@ -177,7 +176,7 @@
             <div class="col-lg-6 col-md-6 p-6">
                 <div class="cashback-item totals">
                     <h4 class="cashback-item__title">Totals</h4>
-                 
+
 
                     <ul class="totals__list">
                         <li class="totals__list-item">
@@ -226,12 +225,36 @@
                 <div class="cashback-item report">
                     <div class="report-header">
                         <h4 class="cashback-item__title">Cash Back Report</h4>
-                        <button class="btn btn-filter" type="button">
-                            <svg width="15" height="11">
-                                <use href="./icons/sprite.svg#icon-filter"></use>
-                            </svg>
-                            Filter
-                        </button>
+                        <div class="dropdown">
+                            <button class="btn btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <svg width="15" height="11">
+                                    <use href="./icons/sprite.svg#icon-filter"></use>
+                                </svg>
+                                Filter
+
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-menu-right report-buttons__list" aria-labelledby="dLabel">
+                                <li class="report-buttons__list-item"><button type="button">all</button></li>
+                                <li class="report-buttons__list-item"><button data-target="order"
+                                        type="button">Order</button>
+                                </li>
+                                <li class="report-buttons__list-item"><button data-target="open-time"
+                                        type="button">Open&nbsp;time</button></li>
+                                <li class="report-buttons__list-item"><button data-target="type"
+                                        type="button">Type</button></li>
+                                <li class="report-buttons__list-item"><button data-target="symbol"
+                                        type="button">Symbol</button>
+                                </li>
+                                <li class="report-buttons__list-item"><button data-target="open-price"
+                                        type="button">Open&nbsp;Price</button></li>
+                                <li class="report-buttons__list-item"><button data-target="close-price"
+                                        type="button">Close&nbsp;Price</button></li>
+                                <li class="report-buttons__list-item"><button data-target="commissions"
+                                        type="button">Rebate&nbsp;Commissions</button></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="report-table-wrapper">
@@ -240,77 +263,86 @@
                             <thead class="report-table__header">
                                 <tr>
                                     <th>Order</th>
-                                    <th>Open time</th>
+                                    <th>Open&nbsp;time</th>
                                     <th>Type</th>
                                     <th>Symbol</th>
-                                    <th>Open Price</th>
-                                    <th>Close Price</th>
-                                    <th>Rebate Commissions</th>
+                                    <th>Open&nbsp;Price</th>
+                                    <th>Close&nbsp;Price</th>
+                                    <th>Rebate&nbsp;Commissions</th>
                                 </tr>
 
                             </thead>
 
                             <tbody class="report-table__body">
+
                                 <tr>
-                                    <td>#39057</td>
-                                    <td>12:43</td>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
-                                    <td>16.50</td>
-                                    <td>457.03</td>
-                                    <td>$68.5</td>
-
-                                </tr>
-                                <tr>
-                                    <td>#39058</td>
-                                    <td>12:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>16.50</td>
-                                    <td>457.03</td>
-                                    <td>$68.5</td>
-
-                                </tr>
-                                <tr>
-                                    <td>#39059</td>
-                                    <td>14:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>16.50</td>
-                                    <td>67.03</td>
-                                    <td>$54.5</td>
-
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
 
                                 </tr>
                                 <tr>
                                     <td>#390510</td>
-                                    <td>14:43</td>
+                                    <td>89:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
-                                    <td>16.50</td>
-                                    <td>67.03</td>
-                                    <td>$54.5</td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>#390511</td>
-                                    <td>15:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>32.50</td>
-                                    <td>21.03</td>
-                                    <td>$24.5</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
 
                                 </tr>
                                 <tr>
-                                    <td>#39059</td>
-                                    <td>15:43</td>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
                                     <td>Cross</td>
                                     <td>USDT</td>
-                                    <td>32.50</td>
-                                    <td>21.03</td>
-                                    <td>$24.5</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
 
                                 </tr>
                                 <tr>
@@ -348,12 +380,12 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
         crossorigin="anonymous"></script>
- 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
 
-    <script src="js/sortable.js"></script>
+    <script src="js/table-sort.js"></script>
     <script src="js/cashback.js"></script>
 
     <script>
@@ -515,7 +547,7 @@
 
         })()
 
- 
+
 
     </script>
 </body>

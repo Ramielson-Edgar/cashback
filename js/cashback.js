@@ -26,14 +26,12 @@ button.addEventListener("click", () => {
 
 })
 
-
 //check if item more than 6 do something.. //
 if (filterItem.length > 6) {
     filterList.style.paddingRight = "15px"
 } else {
     filterList.style.paddingRight = "0"
 }
-
 
 //correction on mobile// 
 if (window.innerWidth <= 575) {
@@ -65,11 +63,7 @@ if (window.innerWidth <= 575) {
         filterList.style.paddingRight = "0"
     }
 
-     
-
-
 }
-
 
 //debounce //
 const debounce = (fn, ms) => {
@@ -102,7 +96,6 @@ function onChange(e) {
 onChange = debounce(onChange, 500)
 
 document.querySelector('.filter-control').addEventListener('keyup', onChange)
-
 
 //active filter sort table//
 document.querySelector('.report-header .btn-filter').addEventListener("click",()=>{

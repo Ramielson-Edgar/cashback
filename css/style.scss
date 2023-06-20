@@ -123,7 +123,7 @@ h4 {
 .cashback-item {
     background-color: #fff;
     border-radius: 23px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .cashback-item__title {
@@ -311,6 +311,9 @@ h4 {
     padding-bottom: 15px;
 }
 
+.cashback-item.report {
+    min-height: 400px;
+}
 
 .report-table {
     width: 100%;
@@ -349,6 +352,22 @@ h4 {
 
 .report-table th {
     width: 220px;
+}
+
+.report-buttons__list {
+    list-style: none;
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: -10px 19px 50px -10px rgba(9, 19, 69, 0.1);
+    border-radius: 9px;
+    border: transparent;
+}
+
+.report-buttons__list-item button {
+    width: 100%;
+    border: 1px solid $grey-500;
+    background: transparent;
+    border-radius: 5px;
 }
 
 .total-statistics {
