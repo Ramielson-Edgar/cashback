@@ -408,13 +408,17 @@
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
 
-    <script src="/js/table-filter.js"></script>
+    <script src="js/table-filter.js"></script>
     <script src="js/cashback.js"></script>
 
     <script>
         (async function () {
 
 
+            const item = Array.from(document.querySelectorAll('.statistics-filter__list-item'))
+            const value = item.map( el=> el.querySelector('.statistics-filter__item-value').textContent)
+             
+   
 
             //entries data // 
             const entriesData = [
