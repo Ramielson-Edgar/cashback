@@ -328,11 +328,22 @@ h4 {
     border-bottom: 1px solid $grey-100;
 }
 
-.report-table__header tr th:not(:last-child),
-.report-table tr td:not(:last-child) {
+.report-table__header tr th,
+.report-table tr td {
     border-right: 1px solid $grey-500;
+    border-left: 1px solid $grey-500;
 }
 
+.report-table__header tr th:first-child {
+    border-top-left-radius: 5px;
+}
+
+
+.report-table__body tr td.is-active,
+.report-table__header tr th.is-active {
+    display: none;
+}
+ 
 .report-table tr:nth-child(2n) {
     background: $blue-100A;
 }

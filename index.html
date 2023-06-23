@@ -162,8 +162,34 @@
                                     </div>
 
                                 </li>
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p class="statistics-filter__item-text">s&p500</p>
+                                        <p class="statistics-filter__item-value">15%</p>
+                                    </div>
 
+                                    <div class="progress">
+                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
 
+                                </li>
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p class="statistics-filter__item-text">s&p500</p>
+                                        <p class="statistics-filter__item-value">15%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                </li>
                             </ul>
 
                         </div>
@@ -236,22 +262,19 @@
                             </button>
 
                             <ul class="dropdown-menu dropdown-menu-right report-buttons__list" aria-labelledby="dLabel">
-                                <li class="report-buttons__list-item"><button type="button">all</button></li>
-                                <li class="report-buttons__list-item"><button data-target="order"
-                                        type="button">Order</button>
+                                <li class="report-buttons__list-item"><button id="reset-btn" type="button">all</button></li>
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="order" type="button">Order</button>
                                 </li>
-                                <li class="report-buttons__list-item"><button data-target="open-time"
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="open-time"
                                         type="button">Open&nbsp;time</button></li>
-                                <li class="report-buttons__list-item"><button data-target="type"
-                                        type="button">Type</button></li>
-                                <li class="report-buttons__list-item"><button data-target="symbol"
-                                        type="button">Symbol</button>
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="type" type="button">Type</button></li>
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="symbol" type="button">Symbol</button>
                                 </li>
-                                <li class="report-buttons__list-item"><button data-target="open-price"
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="open-price"
                                         type="button">Open&nbsp;Price</button></li>
-                                <li class="report-buttons__list-item"><button data-target="close-price"
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="close-price"
                                         type="button">Close&nbsp;Price</button></li>
-                                <li class="report-buttons__list-item"><button data-target="commissions"
+                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="commissions"
                                         type="button">Rebate&nbsp;Commissions</button></li>
                             </ul>
                         </div>
@@ -385,7 +408,7 @@
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
 
-    <script src="js/table-sort.js"></script>
+    <script src="/js/table-filter.js"></script>
     <script src="js/cashback.js"></script>
 
     <script>
@@ -496,6 +519,7 @@
                     labels: entriesData.map(label => label.category),
 
                     datasets: [{
+                        borderWidth: 1,
                         label: 'most effective instruments',
                         backgroundColor: function () {
                             const data = entriesData.map(item => item.category)
@@ -527,6 +551,7 @@
 
                         },
                         data: data(),
+                     
                     }],
 
                 },
