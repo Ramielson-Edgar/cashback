@@ -53,11 +53,13 @@ function onHandleHideColumn(td) {
       if (td.length === visibleTds.length) {
         td.forEach(el => {
             el.classList.remove('is-active');
+            
         });
 
     } else {
         td.forEach(el => {
             el.classList.toggle('is-active');
+ 
         });
     }
 
@@ -76,6 +78,7 @@ function onHandleHideHeader() {
 
                 if (i === btnIndex) {
                     headers[i].classList.toggle('is-active')
+                    
                 }
 
                 if (dataTarget === "order") {
