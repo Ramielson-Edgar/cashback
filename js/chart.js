@@ -51,8 +51,10 @@
         }
 
     })
-
+ 
+ 
     var ctx = document.getElementById('statistics-chart').getContext('2d');
+ 
     var chart = new Chart(ctx, {
         type: 'doughnut',
         // The data for our dataset
@@ -60,6 +62,7 @@
             labels: Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id),
 
             datasets: [{
+                cutout: '90%',
                 label: 'most effective instruments',
                 backgroundColor: function () {
                     const data = Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id)
@@ -95,9 +98,7 @@
         },
 
 
-
         options: {
-
             responsive: true,
             maintainAspectRatio: true,
 
@@ -110,4 +111,5 @@
     });
 
 
+  
 })()
