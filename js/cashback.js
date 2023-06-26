@@ -33,15 +33,16 @@ if (filterItem.length > 6) {
     filterList.style.paddingRight = "0"
 }
 
-//correction on mobile// 
+//correction on mobile//
 if (window.innerWidth <= 575) {
+    console.log('575')
 
     button.addEventListener("click", () => {
     if (inputGroup.classList.contains('is-active') && filterItem.length >= 5) {
         filterList.style.paddingRight = "15px"
     }
 
-    if (filterItem.length >= 5 && inputGroup.classList.contains('is-active')) {
+    if (filterItem.length >= 4 && inputGroup.classList.contains('is-active')) {
         filterList.style.paddingRight = "15px"
     }
 
@@ -51,19 +52,21 @@ if (window.innerWidth <= 575) {
     }
 
     
-    if (!inputGroup.classList.contains('is-active') && filterItem.length === 5 ) {
+    if (!inputGroup.classList.contains('is-active') && filterItem.length === 4 ) {
         filterList.style.paddingRight = "0"
     }
 
     })
 
-    if (filterItem.length >= 6) {
+    if (filterItem.length >= 5) {
         filterList.style.paddingRight = "15px"
     } else {
         filterList.style.paddingRight = "0"
     }
 
 }
+
+
 
 //debounce //
 const debounce = (fn, ms) => {
@@ -97,10 +100,4 @@ onChange = debounce(onChange, 500)
 
 document.querySelector('.filter-control').addEventListener('keyup', onChange)
 
-//active filter sort table//
-document.querySelector('.report-header .btn-filter').addEventListener("click",()=>{
-  const table = document.querySelector('.report-table')
-  table.classList.toggle('sortable')
  
-})
-

@@ -14,239 +14,219 @@
 </head>
 
 <body>
-    <div class="container-fluid heading-container">
-        <h3 class="page-title">AdroFX Cash Back Program</h3>
-        <p class="page-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolor</p>
-        <hr>
-    </div>
+ 
+    <div class="main-container">
+        <div class="sidebar"></div>
 
-    <div class="content">
+        <div class="content-container cashback">
+            <div class="container-fluid heading-container">
+                <h3 class="page-title">AdroFX Cash Back Program</h3>
+                <p class="page-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit
+                    esse cillum dolor</p>
+                <hr>
+            </div>
 
-        <div class="row total-statistics">
-            <div class="col-lg-6 col-md-6 p-6">
-                <div class="cashback-item statistics">
-                    <div class="statistics-feedback">
-                        <h4 class="cashback-item__title">Statistics</h4>
+            <div class="content">
+                <div class="total-statistics">
+                    <div class="cashback-item statistics">
+                        <div class="statistics-feedback">
+                            <h4 class="cashback-item__title">Statistics</h4>
 
-                        <div class="chart-container">
-                            <canvas id="statistics-chart" width="200" height="200" aria-label="chart"
-                                role="img"></canvas>
+                            <div class="chart-container">
+                                <canvas id="statistics-chart" width="200" height="200" aria-label="chart"
+                                    role="img"></canvas>
+                            </div>
+
+
+                            <div class="statistics-feedback-note">
+                                You can check in real time which instrument give you more profit
+                            </div>
                         </div>
 
 
-                        <div class="statistics-feedback-note">
-                            You can check in real time which instrument give you more profit
-                        </div>
-                    </div>
+                        <div class="statistics-filter">
+                            <div class="statistics-filter__header">
+
+                                <h4 class="statistics-filter__title">Instruments</h4>
+                                <button class="btn btn-filter" type="button">
+                                    <svg width="15" height="11">
+                                        <use href="./icons/sprite.svg#icon-search"></use>
+                                    </svg>
+                                    search
+                                </button>
 
 
-                    <div class="statistics-filter">
-                        <div class="statistics-filter__header">
+                            </div>
 
-                            <h4 class="statistics-filter__title">Instruments</h4>
-                            <button class="btn btn-filter" type="button">
-                                <svg width="15" height="11">
-                                    <use href="./icons/sprite.svg#icon-search"></use>
-                                </svg>
-                                search
-                            </button>
-
-
-                        </div>
-
-                        <div class="filter-group">
-                            <span class="filter-icon">
-                                <svg width="19" height="19">
-                                    <use href="./icons/sprite.svg#icon-search"></use>
-                                </svg>
-                            </span>
-                            <input type="text" class="filter-control">
-                        </div>
-
-
+                            <div class="filter-group">
+                                <span class="filter-icon">
+                                    <svg width="19" height="19">
+                                        <use href="./icons/sprite.svg#icon-search"></use>
+                                    </svg>
+                                </span>
+                                <input type="text" class="filter-control">
+                            </div>
 
                         <div class="statistics-filter-wrapper">
 
-                            <ul class="statistics-filter__list">
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">bitcoin</p>
-                                        <p class="statistics-filter__item-value">23%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                <ul class="statistics-filter__list">
+                                    <li class="statistics-filter__list-item">
+                                        <div class="statistics-filter__item-header">
+                                            <p id="crypto" class="statistics-filter__item-text">bitcoin</p>
+                                            <p class="statistics-filter__item-value">50%</p>
                                         </div>
-                                    </div>
-                                </li>
 
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
+                                        <div class="progress">
+                                            <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100">
 
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                            </div>
                                         </div>
-                                    </div>
+                                    </li>
 
-                                </li>
-
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                    <li class="statistics-filter__list-item">
+                                        <div class="statistics-filter__item-header">
+                                            <p id="metals" class="statistics-filter__item-text">gold</p>
+                                            <p class="statistics-filter__item-value">24%</p>
                                         </div>
-                                    </div>
 
-                                </li>
+                                        <div class="progress">
+                                            <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100">
 
-
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                            </div>
                                         </div>
-                                    </div>
 
-                                </li>
+                                    </li>
 
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                    <li class="statistics-filter__list-item">
+                                        <div class="statistics-filter__item-header">
+                                            <p id="metals" class="statistics-filter__item-text">gold</p>
+                                            <p class="statistics-filter__item-value">24%</p>
                                         </div>
-                                    </div>
 
-                                </li>
+                                        <div class="progress">
+                                            <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100">
 
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                            </div>
                                         </div>
-                                    </div>
 
-                                </li>
+                                    </li>
 
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
-
+                                    <li class="statistics-filter__list-item">
+                                        <div class="statistics-filter__item-header">
+                                            <p id="metals" class="statistics-filter__item-text">gold</p>
+                                            <p class="statistics-filter__item-value">24%</p>
                                         </div>
-                                    </div>
 
-                                </li>
+                                        <div class="progress">
+                                            <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100">
 
-                                <li class="statistics-filter__list-item">
-                                    <div class="statistics-filter__item-header">
-                                        <p class="statistics-filter__item-text">s&p500</p>
-                                        <p class="statistics-filter__item-value">15%</p>
-                                    </div>
-
-                                    <div class="progress">
-                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                            aria-valuemax="100">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                </li>
-                            </ul>
+                                    </li>
+
+                                   
+                                    <li class="statistics-filter__list-item">
+                                        <div class="statistics-filter__item-header">
+                                            <p id="metals" class="statistics-filter__item-text">gold</p>
+                                            <p class="statistics-filter__item-value">24%</p>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100">
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                   
+                                
+                                    <li class="statistics-filter__list-item">
+                                        <div class="statistics-filter__item-header">
+                                            <p id="metals" class="statistics-filter__item-text">gold</p>
+                                            <p class="statistics-filter__item-value">24%</p>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                                aria-valuemax="100">
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+
+ 
+
+
+                               
+                                    
+                                </ul>
+
+                        </div>
 
                         </div>
 
                     </div>
 
+                    <div class="cashback-item totals">
+                        <h4 class="cashback-item__title">Totals</h4>
+
+
+                        <ul class="totals__list">
+                            <li class="totals__list-item">
+                                <div class="totals__item-icon-container">
+                                    <svg width="11" height="23">
+                                        <use href="./icons/sprite.svg#icon-add"></use>
+                                    </svg>
+                                </div>
+                                <div class="totals__item-body">
+                                    <p class="totals__item-body-text">Total cash back</p>
+                                    <p class="totals__item-body-value">$365</p>
+                                </div>
+                            </li>
+                            <li class="totals__list-item">
+                                <div class="totals__item-icon-container">
+                                    <svg width="22" height="22">
+                                        <use href="./icons/sprite.svg#icon-calendar"></use>
+                                    </svg>
+                                </div>
+                                <div class="totals__item-body">
+                                    <p class="totals__item-body-text">This month cash back</p>
+                                    <p class="totals__item-body-value">$111</p>
+                                </div>
+                            </li>
+                            <li class="totals__list-item">
+                                <div class="totals__item-icon-container">
+                                    <svg width="22" height="22">
+                                        <use href="./icons/sprite.svg#icon-card"></use>
+                                    </svg>
+                                </div>
+                                <div class="totals__item-body">
+                                    <p class="totals__item-body-text">Available payout</p>
+                                    <p class="totals__item-body-value">$111</p>
+                                </div>
+
+                            </li>
+                        </ul>
+
+                        <button class="btn btn-lg btn-blue-white" type="button">add to your account</button>
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="col-lg-6 col-md-6 p-6">
-                <div class="cashback-item totals">
-                    <h4 class="cashback-item__title">Totals</h4>
-
-
-                    <ul class="totals__list">
-                        <li class="totals__list-item">
-                            <div class="totals__item-icon-container">
-                                <svg width="11" height="23">
-                                    <use href="./icons/sprite.svg#icon-add"></use>
-                                </svg>
-                            </div>
-                            <div class="totals__item-body">
-                                <p class="totals__item-body-text">Total cash back</p>
-                                <p class="totals__item-body-value">$365</p>
-                            </div>
-                        </li>
-                        <li class="totals__list-item">
-                            <div class="totals__item-icon-container">
-                                <svg width="22" height="22">
-                                    <use href="./icons/sprite.svg#icon-calendar"></use>
-                                </svg>
-                            </div>
-                            <div class="totals__item-body">
-                                <p class="totals__item-body-text">This month cash back</p>
-                                <p class="totals__item-body-value">$111</p>
-                            </div>
-                        </li>
-                        <li class="totals__list-item">
-                            <div class="totals__item-icon-container">
-                                <svg width="22" height="22">
-                                    <use href="./icons/sprite.svg#icon-card"></use>
-                                </svg>
-                            </div>
-                            <div class="totals__item-body">
-                                <p class="totals__item-body-text">Available payout</p>
-                                <p class="totals__item-body-value">$111</p>
-                            </div>
-
-                        </li>
-                    </ul>
-
-                    <button class="btn btn-lg btn-blue-white" type="button">add to your account</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-12 p-6">
                 <div class="cashback-item report">
                     <div class="report-header">
                         <h4 class="cashback-item__title">Cash Back Report</h4>
@@ -262,7 +242,8 @@
 
                             <ul class="dropdown-menu dropdown-menu-right report-buttons__list" aria-labelledby="dLabel">
                                 <li class="report-buttons__list-item"><button id="reset-btn"
-                                        type="button">reset</button></li>
+                                        type="button">reset</button>
+                                </li>
                                 <li class="report-buttons__list-item"><button class="filter-btn" data-target="order"
                                         type="button">Order</button>
                                 </li>
@@ -278,7 +259,8 @@
                                 <li class="report-buttons__list-item"><button class="filter-btn"
                                         data-target="close-price" type="button">Close&nbsp;Price</button></li>
                                 <li class="report-buttons__list-item"><button class="filter-btn"
-                                        data-target="commissions" type="button">Rebate&nbsp;Commissions</button></li>
+                                        data-target="commissions" type="button">Rebate&nbsp;Commissions</button>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -301,6 +283,94 @@
 
                             <tbody class="report-table__body">
 
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>#390510</td>
+                                    <td>89:43</td>
+                                    <td>Cross</td>
+                                    <td>USDT</td>
+                                    <td>56.50</td>
+                                    <td>56.03</td>
+                                    <td>$120.5</td>
+
+                                </tr>
 
                                 <tr>
                                     <td>#390510</td>
@@ -377,12 +447,12 @@
                     </div>
                 </div>
             </div>
+
         </div>
-
-
 
     </div>
 
+ 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
@@ -392,179 +462,9 @@
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
 
-    <script src="js/table-filter.js"></script>
     <script src="js/cashback.js"></script>
-
-    <script>
-        (async function () {
-
-
-            const item = Array.from(document.querySelectorAll('.statistics-filter__list-item'))
-            const value = item.map(el => el.querySelector('.statistics-filter__item-value').textContent)
-
-
-
-            //entries data // 
-            const entriesData = [
-                {
-                    id: 1,
-                    label: "bitcoin",
-                    category: "crypto",
-                    data: 30,
-                },
-                {
-                    id: 2,
-                    label: "s&p500",
-                    category: "indices",
-                    data: 30,
-                }, {
-                    id: 3,
-                    label: "eur usd",
-                    category: "forex",
-                    data: 20,
-                },
-                {
-                    id: 4,
-                    label: "tesla",
-                    category: "shares",
-                    data: 50,
-                },
-                {
-                    id: 5,
-                    label: "gold",
-                    category: "metals",
-                    data: 120,
-                },
-                {
-                    id: 6,
-                    label: "twitter",
-                    category: "shares",
-                    data: 50,
-                },
-
-            ]
-
-
-
-            function data() {
-                const categoryData = {};
-
-                for (const obj of entriesData) {
-                    const category = obj.category;
-                    const dataValue = obj.data;
-
-                    if (category in categoryData) {
-
-                        categoryData[category] += dataValue;
-                    } else {
-
-                        categoryData[category] = dataValue;
-                    }
-                }
-
-
-                return Object.values(categoryData)
-            }
-
-
-            //Changed color of progress bar//
-            document.querySelectorAll('.progress-bar').forEach((el, i) => {
-
-                const category = entriesData.map(data => data.category)
-                const percentages = entriesData.map(data => data.data)
-                el.style.width = `${Number(percentages[i])}%`
-
-
-                //render dependent from id
-                if (category.includes('crypto') && el.id === "crypto") {
-                    el.style.backgroundColor = "#F44336"
-                }
-
-                if (category.includes('indices') && el.id === "indices") {
-                    el.style.backgroundColor = "#811EFF"
-                }
-
-                if (category.includes('forex') && el.id === "forex") {
-                    el.style.backgroundColor = "#FFA51E"
-                }
-
-                if (category.includes('shares') && el.id === "shares") {
-                    el.style.backgroundColor = "#42A5F5"
-                }
-
-                if (category.includes('metals') && el.id === "metals") {
-                    el.style.backgroundColor = "#4CD7AB"
-                }
-
-            })
-
-            var ctx = document.getElementById('statistics-chart').getContext('2d');
-            var chart = new Chart(ctx, {
-                type: 'doughnut',
-                // The data for our dataset
-                data: {
-                    labels: entriesData.map(label => label.category),
-
-                    datasets: [{
-                        borderWidth: 1,
-                        cutout: "10%",
-                        label: 'most effective instruments',
-                        backgroundColor: function () {
-                            const data = entriesData.map(item => item.category)
-                            const backgroundColor = []
-
-                            if (data.includes('crypto')) {
-                                backgroundColor.push("#F44336")
-                            }
-
-                            if (data.includes('indices')) {
-                                backgroundColor.push("#811EFF")
-                            }
-
-                            if (data.includes('forex')) {
-                                backgroundColor.push("#FFA51E")
-                            }
-
-                            if (data.includes('shares')) {
-                                backgroundColor.push("#42A5F5")
-                            }
-
-                            if (data.includes('metals')) {
-                                backgroundColor.push("#4CD7AB")
-                            }
-
-
-
-                            return backgroundColor
-
-                        },
-                        data: data(),
-
-                    }],
-
-                },
-
-
-
-                options: {
-
-                    responsive: true,
-                    maintainAspectRatio: true,
-
-                 
-                        legend: {
-                            display: false
-                        },
- 
-                },
-            });
-
-
-        })()
-
-
-
-    </script>
+    <script src="js/table-filter.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 
 </html>

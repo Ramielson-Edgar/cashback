@@ -40,8 +40,12 @@ h4 {
 
 
 .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    flex: 1 1 auto;
     padding: 10px;
-    margin: 10px;
 }
 
 .text-bold {
@@ -146,6 +150,16 @@ h4 {
     overflow: hidden;
 }
 
+.cashback-item.statistics {
+    flex: 2;
+    margin-right: 6px;
+}
+
+
+.statistics-feedback {
+    padding: 15px;
+}
+
 
 .statistics-filter,
 .statistics-feedback {
@@ -173,12 +187,12 @@ h4 {
 }
 
 .statistics-filter__header {
-
-
+    position: relative;
     align-items: center;
     border-bottom: 1px solid $grey-500;
-    padding-bottom: 15px;
+   padding-bottom: 15px;
     margin-bottom: 15px;
+    
 }
 
 .statistics-filter-wrapper {
@@ -272,6 +286,7 @@ h4 {
     margin-bottom: 39px;
 }
 
+.cashback-item.totals {flex: 1;}
 
 
 .totals__item-icon-container {
@@ -308,11 +323,13 @@ h4 {
 .totals__list-item:not(:last-child) {
     margin-bottom: 20px;
     border-bottom: 1px solid $grey-500;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 
+ 
 .cashback-item.report {
     min-height: 400px;
+    width: 100%;
 }
 
 .report-table {
@@ -382,9 +399,15 @@ h4 {
     border-radius: 5px;
 }
 
+ 
+
 .total-statistics {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 6px;
+    width: 100%;
 }
+
 
 .report-header .cashback-item__title {
     margin-bottom: 0;
@@ -398,10 +421,7 @@ h4 {
     padding: 6px;
 }
 
-
-.statistics-filter__header {
-    position: relative;
-}
+ 
 
 .statistics-filter {
     overflow: hidden;
@@ -465,7 +485,6 @@ h4 {
 }
 
 
-
 .statistics-filter-wrapper::-webkit-scrollbar {
     width: 5px;
     background-color: rgb(238, 238, 238);
@@ -475,8 +494,47 @@ h4 {
     background: #000;
 }
 
-#chartjs-tooltip {
-    background: red;
+
+.main-container {
+    display: flex;
+    min-height: 100%;
+    background: #363636;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.content-container {
+    background: #fff;
+    flex: 1 1 0;
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 250px;
+    background: rgb(154, 154, 154);
+}
+ 
+.content-container.cashback {
+    background: #F9FAFF;
+}
+
+.heading-container {
+    width: 100%;
+}
+
+
+
+@media (max-width:1198px) {
+    .total-statistics {
+        flex-direction: column;
+    }
+    .cashback-item.statistics {
+        margin-right: 0;
+        margin-bottom: 6px;
+    }
 }
 
 
@@ -497,6 +555,10 @@ h4 {
     .page-title {
         font-size: 18px;
         margin-bottom: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
     }
 
     .cashback-item.totals .btn-lg {
@@ -530,11 +592,11 @@ h4 {
     }
 
     .statistics-filter-wrapper {
-        height: 300px;
+        height: 250px;
     }
 
     .statistics-filter-wrapper.is-active {
-        height: 225px;
+        height: 200px;
     }
 
     .statistics-filter {
