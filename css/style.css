@@ -431,6 +431,25 @@ h4 {
   background: #000;
 }
 
+.chart-totals {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-totals-text {
+  text-transform: capitalize;
+  color: #929292;
+  margin-bottom: 13px;
+  line-height: 0;
+}
+
+.chart-total-heading {
+  font-weight: 700;
+}
+
 @media (max-width: 1198px) {
   .total-statistics {
     flex-direction: column;

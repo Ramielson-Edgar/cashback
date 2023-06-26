@@ -1,8 +1,6 @@
-(async function () {
+   const item = document.querySelectorAll('.statistics-filter__list-item')
 
-    const item = document.querySelectorAll('.statistics-filter__list-item')
-
-    function data() {
+    function newData() {
         var sum = {};
 
         for (var i = 0; i < item.length; i++) {
@@ -52,64 +50,65 @@
 
     })
  
+
+    const data = {
+        labels: Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id),
+ 
+        datasets: [{
+           
+            label: 'most effective instruments',
+            backgroundColor: function () {
+                const data = Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id)
+                const backgroundColor = []
+
+                if (data.includes('crypto')) {
+                    backgroundColor.push("#F44336")
+                }
+
+                if (data.includes('indices')) {
+                    backgroundColor.push("#811EFF")
+                }
+
+                if (data.includes('forex')) {
+                    backgroundColor.push("#FFA51E")
+                }
+
+                if (data.includes('shares')) {
+                    backgroundColor.push("#42A5F5")
+                }
+
+                if (data.includes('metals')) {
+                    backgroundColor.push("#4CD7AB")
+                }
+
+                return backgroundColor
+
+            },
+            data: newData(),
+  
+
+        }],
+    }
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            cutoutPercentage:65,
+                    responsive: true,
+                    maintainAspectRatio: true,
+ 
+                    legend: {
+                        display: false
+                    },
+        
+                },
+    }
  
     var ctx = document.getElementById('statistics-chart').getContext('2d');
+    var chart = new Chart(ctx, config);
  
-    var chart = new Chart(ctx, {
-        type: 'doughnut',
-        // The data for our dataset
-        data: {
-            labels: Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id),
-
-            datasets: [{
-                cutout: '90%',
-                label: 'most effective instruments',
-                backgroundColor: function () {
-                    const data = Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id)
-                    const backgroundColor = []
-
-                    if (data.includes('crypto')) {
-                        backgroundColor.push("#F44336")
-                    }
-
-                    if (data.includes('indices')) {
-                        backgroundColor.push("#811EFF")
-                    }
-
-                    if (data.includes('forex')) {
-                        backgroundColor.push("#FFA51E")
-                    }
-
-                    if (data.includes('shares')) {
-                        backgroundColor.push("#42A5F5")
-                    }
-
-                    if (data.includes('metals')) {
-                        backgroundColor.push("#4CD7AB")
-                    }
-
-                    return backgroundColor
-
-                },
-                data: data(),
-
-            }],
-
-        },
-
-
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-
-
-            legend: {
-                display: false
-            },
-
-        },
-    });
+  
 
 
   
-})()

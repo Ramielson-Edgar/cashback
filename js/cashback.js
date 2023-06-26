@@ -3,6 +3,8 @@ const filterItem = document.querySelectorAll('.statistics-filter__list-item')
 const filterList = document.querySelector('.statistics-filter__list')
 const inputGroup = document.querySelector('.filter-group')
 const scrollContainer = document.querySelector('.statistics-filter-wrapper');
+const totalValue = document.querySelector('.totals__list-item:first-child .totals__item-body-value')
+const chartHeading = document.querySelector('.chart-total-heading')
 
 //on handle active filter //
 button.addEventListener("click", () => {
@@ -35,8 +37,7 @@ if (filterItem.length > 6) {
 
 //correction on mobile//
 if (window.innerWidth <= 575) {
-    console.log('575')
-
+ 
     button.addEventListener("click", () => {
     if (inputGroup.classList.contains('is-active') && filterItem.length >= 5) {
         filterList.style.paddingRight = "15px"
@@ -65,8 +66,6 @@ if (window.innerWidth <= 575) {
     }
 
 }
-
-
 
 //debounce //
 const debounce = (fn, ms) => {
@@ -100,4 +99,5 @@ onChange = debounce(onChange, 500)
 
 document.querySelector('.filter-control').addEventListener('keyup', onChange)
 
- 
+//render total cashback inside canvas//
+chartHeading.innerHTML =totalValue.textContent
