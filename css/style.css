@@ -120,10 +120,6 @@ h4 {
   margin-right: 6px;
 }
 
-.statistics-feedback {
-  padding: 15px;
-}
-
 .statistics-filter,
 .statistics-feedback {
   flex: 1;
