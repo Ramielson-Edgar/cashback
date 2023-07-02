@@ -5,7 +5,7 @@ body {
   line-height: 30px;
   font-weight: 400;
   color: #232323;
-  background-color: #F9FAFF;
+  background-color: #f9faff;
 }
 
 h1,
@@ -17,15 +17,6 @@ h4 {
   font-weight: 700;
 }
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
-  flex: 1 1 auto;
-  padding: 10px;
-}
-
 .text-bold {
   font-weight: 700;
   text-transform: capitalize;
@@ -34,7 +25,7 @@ h4 {
 .page-title {
   font-size: 50px;
   font-weight: 700;
-  color: #42A5F5;
+  color: #42a5f5;
   margin-bottom: 17px;
 }
 
@@ -44,9 +35,9 @@ h4 {
 }
 
 .btn.btn-filter {
-  color: #C3C3C3;
+  color: #c3c3c3;
   background: transparent;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   transition: all 0.3s ease-in-out;
 }
 .btn.btn-filter:focus, .btn.btn-filter:active, .btn.btn-filter:hover {
@@ -57,7 +48,7 @@ h4 {
 }
 
 .btn-filter svg {
-  stroke: #D9D9D9;
+  stroke: #d9d9d9;
   transition: all 0.3s ease-in-out;
 }
 
@@ -68,7 +59,7 @@ h4 {
 }
 
 .btn-white-gray {
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   background: transparent;
 }
 .btn-white-gray:focus, .btn-white-gray:active, .btn-white-gray:hover {
@@ -80,14 +71,14 @@ h4 {
 
 .btn-blue-white {
   color: #fff;
-  background: #42A5F5;
+  background: #42a5f5;
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 .btn-blue-white:focus, .btn-blue-white:active, .btn-blue-white:hover {
-  color: #42A5F5;
+  color: #42a5f5;
   background: transparent;
-  border: 1px solid #42A5F5;
+  border: 1px solid #42a5f5;
   outline: none;
 }
 
@@ -113,6 +104,7 @@ h4 {
 .cashback-item.statistics {
   display: flex;
   overflow: hidden;
+  padding: 15px 0 15px 15px;
 }
 
 .cashback-item.statistics {
@@ -131,7 +123,7 @@ h4 {
 }
 
 .statistics-filter {
-  border-left: 1px solid #D9D9D9;
+  border-left: 1px solid #d9d9d9;
   padding-left: 14px;
 }
 
@@ -144,13 +136,15 @@ h4 {
 .statistics-filter__header {
   position: relative;
   align-items: center;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
   padding-bottom: 15px;
+  margin-right: 15px;
   margin-bottom: 15px;
 }
 
 .statistics-filter-wrapper {
   position: relative;
+  padding-right: 15px;
 }
 
 .filter-group.is-active .filter-icon {
@@ -164,7 +158,7 @@ h4 {
 
 .filter-group.is-active {
   display: flex;
-  width: 100%;
+  width: 96%;
   height: 45px;
   border: 1px solid #dbdbdb;
   margin-bottom: 20px;
@@ -176,7 +170,7 @@ h4 {
   height: 0;
   align-items: center;
   border-radius: 9px;
-  background: #FEFEFE;
+  background: #fefefe;
   transition: all 0.3s ease-in-out;
 }
 
@@ -193,8 +187,8 @@ h4 {
 .statistics-feedback-note {
   font-size: 14px;
   line-height: 24px;
-  color: #C3C3C3;
-  border-top: 1px solid #D9D9D9;
+  color: #c3c3c3;
+  border-top: 1px solid #d9d9d9;
   padding: 15px 0;
   padding-right: 15px;
 }
@@ -241,7 +235,7 @@ h4 {
   width: 46px;
   height: 46px;
   margin-right: 13px;
-  background: #F9FCFE;
+  background: #f9fcfe;
 }
 
 .report-header,
@@ -264,7 +258,7 @@ h4 {
 
 .totals__list-item:not(:last-child) {
   margin-bottom: 20px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
   padding-bottom: 25px;
 }
 
@@ -275,21 +269,21 @@ h4 {
 
 .report-table {
   width: 100%;
-  border-top: 1px solid #D9D9D9;
+  border-top: 1px solid #d9d9d9;
 }
 
 .report-table__header tr {
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .report-table__body tr {
-  border-bottom: 1px solid #FAFAFA;
+  border-bottom: 1px solid #fafafa;
 }
 
 .report-table__header tr th,
 .report-table tr td {
-  border-right: 1px solid #D9D9D9;
-  border-left: 1px solid #D9D9D9;
+  border-right: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
 }
 
 .report-table__header tr th:first-child {
@@ -302,7 +296,7 @@ h4 {
 }
 
 .report-table tr:nth-child(2n) {
-  background: #FDFDFF;
+  background: #fdfdff;
 }
 
 .report-table-wrapper {
@@ -325,7 +319,7 @@ h4 {
 .report-buttons__list {
   list-style: none;
   padding: 10px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: -10px 19px 50px -10px rgba(9, 19, 69, 0.1);
   border-radius: 9px;
   border: transparent;
@@ -333,7 +327,7 @@ h4 {
 
 .report-buttons__list-item button {
   width: 100%;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   text-transform: capitalize;
   background: transparent;
   border-radius: 5px;
@@ -382,22 +376,22 @@ h4 {
 
 .filter-control {
   font-size: 14px;
-  color: #4B4B4B;
+  color: #4b4b4b;
   text-transform: uppercase;
 }
 
 .filter-control::-moz-placeholder {
-  color: #C3C3C3;
+  color: #c3c3c3;
   text-transform: capitalize;
 }
 
 .filter-control:-ms-input-placeholder {
-  color: #C3C3C3;
+  color: #c3c3c3;
   text-transform: capitalize;
 }
 
 .filter-control::placeholder {
-  color: #C3C3C3;
+  color: #c3c3c3;
   text-transform: capitalize;
 }
 
@@ -468,6 +462,9 @@ h4 {
   }
 }
 @media (max-width: 575.98px) {
+  .filter-group.is-active {
+    width: 98%;
+  }
   .cashback-item.totals .btn-lg {
     font-size: 14px;
     padding: 10px;

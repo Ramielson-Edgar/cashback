@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
  
 
             <div class="container-fluid heading-container">
@@ -27,409 +28,429 @@
                     esse cillum dolor</p>
                 <hr>
             </div>
-           
+
             <div class="total-statistics">
-                    <div class="cashback-item statistics">
-                        <div class="statistics-feedback">
-                            <h4 class="cashback-item__title">Statistics</h4>
+                <div class="cashback-item statistics">
+                    <div class="statistics-feedback">
+                        <h4 class="cashback-item__title">Statistics</h4>
 
-                            <div class="chart-container">
-                                 <div class="chart-totals">
-                                    <p class="chart-totals-text">Total</p>
-                                    <p class="chart-total-heading">$10 0000 000</p>
-                                    
-                                 </div>
-                                <canvas id="statistics-chart" width="200" height="200" aria-label="chart"
-                                    role="img"></canvas>
+                        <div class="chart-container">
+                            <div class="chart-totals">
+                                <p class="chart-totals-text">Total</p>
+                                <p class="chart-total-heading">$10 0000 000</p>
+
                             </div>
-
-
-                            <div class="statistics-feedback-note">
-                                You can check in real time which instrument give you more profit
-                            </div>
+                            <canvas id="statistics-chart" width="200" height="200" aria-label="chart"
+                                role="img"></canvas>
                         </div>
 
 
-                        <div class="statistics-filter">
-                            <div class="statistics-filter__header">
-
-                                <h4 class="statistics-filter__title">Instruments</h4>
-                                <button class="btn btn-filter" type="button">
-                                    <svg width="15" height="11">
-                                        <use href="./icons/sprite.svg#icon-search"></use>
-                                    </svg>
-                                    search
-                                </button>
+                        <div class="statistics-feedback-note">
+                            You can check in real time which instrument give you more profit
+                        </div>
+                    </div>
 
 
-                            </div>
+                    <div class="statistics-filter">
+                        <div class="statistics-filter__header">
 
-                            <div class="filter-group">
-                                <span class="filter-icon">
-                                    <svg width="19" height="19">
-                                        <use href="./icons/sprite.svg#icon-search"></use>
-                                    </svg>
-                                </span>
-                                <input type="text" class="filter-control">
-                            </div>
+                            <h4 class="statistics-filter__title">Instruments</h4>
+                            <button class="btn btn-filter" type="button">
+                                <svg width="15" height="11">
+                                    <use href="./icons/sprite.svg#icon-search"></use>
+                                </svg>
+                                search
+                            </button>
+
+
+                        </div>
+
+                        <div class="filter-group">
+                            <span class="filter-icon">
+                                <svg width="19" height="19">
+                                    <use href="./icons/sprite.svg#icon-search"></use>
+                                </svg>
+                            </span>
+                            <input type="text" class="filter-control">
+                        </div>
 
                         <div class="statistics-filter-wrapper">
 
-                                <ul class="statistics-filter__list">
-                                    <li class="statistics-filter__list-item">
-                                        <div class="statistics-filter__item-header">
-                                            <p id="crypto" class="statistics-filter__item-text">bitcoin</p>
-                                            <p class="statistics-filter__item-value">50%</p>
+                            <ul class="statistics-filter__list">
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p id="crypto" class="statistics-filter__item-text">bitcoin</p>
+                                        <p class="statistics-filter__item-value">50%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+
                                         </div>
+                                    </div>
+                                </li>
 
-                                        <div class="progress">
-                                            <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                                aria-valuemax="100">
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p id="metals" class="statistics-filter__item-text">gold</p>
+                                        <p class="statistics-filter__item-value">24%</p>
+                                    </div>
 
-                                            </div>
+                                    <div class="progress">
+                                        <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+
                                         </div>
-                                    </li>
+                                    </div>
 
-                                    <li class="statistics-filter__list-item">
-                                        <div class="statistics-filter__item-header">
-                                            <p id="metals" class="statistics-filter__item-text">gold</p>
-                                            <p class="statistics-filter__item-value">24%</p>
+                                </li>
+
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p id="forex" class="statistics-filter__item-text">eur usd</p>
+                                        <p class="statistics-filter__item-value">32%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="forex" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+
                                         </div>
+                                    </div>
 
-                                        <div class="progress">
-                                            <div id="metals" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                                aria-valuemax="100">
+                                </li>
 
-                                            </div>
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p id="indices" class="statistics-filter__item-text">s&p500</p>
+                                        <p class="statistics-filter__item-value">27%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+
                                         </div>
+                                    </div>
 
-                                    </li>
+                                </li>
 
-                                    <li class="statistics-filter__list-item">
-                                        <div class="statistics-filter__item-header">
-                                            <p id="forex" class="statistics-filter__item-text">eur usd</p>
-                                            <p class="statistics-filter__item-value">32%</p>
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p id="crypto" class="statistics-filter__item-text">eth</p>
+                                        <p class="statistics-filter__item-value">16%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+
                                         </div>
+                                    </div>
 
-                                        <div class="progress">
-                                            <div id="forex" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                                aria-valuemax="100">
+                                </li> 
 
-                                            </div>
+                                <li class="statistics-filter__list-item">
+                                    <div class="statistics-filter__item-header">
+                                        <p id="crypto" class="statistics-filter__item-text">eth</p>
+                                        <p class="statistics-filter__item-value">16%</p>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                            aria-valuemax="100">
+
                                         </div>
+                                    </div>
 
-                                    </li>
+                                </li>  
+                           
+                             
+                           
+                           
+                            
+                            
 
-                                    <li class="statistics-filter__list-item">
-                                        <div class="statistics-filter__item-header">
-                                            <p id="indices" class="statistics-filter__item-text">s&p500</p>
-                                            <p class="statistics-filter__item-value">27%</p>
-                                        </div>
 
-                                        <div class="progress">
-                                            <div id="indices" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                                aria-valuemax="100">
 
-                                            </div>
-                                        </div>
 
-                                    </li>
-                                   
-                                    <li class="statistics-filter__list-item">
-                                        <div class="statistics-filter__item-header">
-                                            <p id="crypto" class="statistics-filter__item-text">eth</p>
-                                            <p class="statistics-filter__item-value">16%</p>
-                                        </div>
-
-                                        <div class="progress">
-                                            <div id="crypto" class="progress-bar" role="progressbar" aria-valuemin="0"
-                                                aria-valuemax="100">
-
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                                               
-                                   
-                                 
-
-                                </ul>
-
-                        </div>
+                            </ul>
 
                         </div>
 
                     </div>
 
-                    <div class="cashback-item totals">
-                        <h4 class="cashback-item__title">Totals</h4>
+                </div>
+
+                <div class="cashback-item totals">
+                    <h4 class="cashback-item__title">Totals</h4>
 
 
-                        <ul class="totals__list">
-                            <li class="totals__list-item">
-                                <div class="totals__item-icon-container">
-                                    <svg width="11" height="23">
-                                        <use href="./icons/sprite.svg#icon-add"></use>
-                                    </svg>
-                                </div>
-                                <div class="totals__item-body">
-                                    <p class="totals__item-body-text">Total cash back</p>
-                                    <p class="totals__item-body-value">$365</p>
-                                </div>
-                            </li>
-                            <li class="totals__list-item">
-                                <div class="totals__item-icon-container">
-                                    <svg width="22" height="22">
-                                        <use href="./icons/sprite.svg#icon-calendar"></use>
-                                    </svg>
-                                </div>
-                                <div class="totals__item-body">
-                                    <p class="totals__item-body-text">This month cash back</p>
-                                    <p class="totals__item-body-value">$111</p>
-                                </div>
-                            </li>
-                            <li class="totals__list-item">
-                                <div class="totals__item-icon-container">
-                                    <svg width="22" height="22">
-                                        <use href="./icons/sprite.svg#icon-card"></use>
-                                    </svg>
-                                </div>
-                                <div class="totals__item-body">
-                                    <p class="totals__item-body-text">Available payout</p>
-                                    <p class="totals__item-body-value">$111</p>
-                                </div>
+                    <ul class="totals__list">
+                        <li class="totals__list-item">
+                            <div class="totals__item-icon-container">
+                                <svg width="11" height="23">
+                                    <use href="./icons/sprite.svg#icon-add"></use>
+                                </svg>
+                            </div>
+                            <div class="totals__item-body">
+                                <p class="totals__item-body-text">Total cash back</p>
+                                <p class="totals__item-body-value">$365</p>
+                            </div>
+                        </li>
+                        <li class="totals__list-item">
+                            <div class="totals__item-icon-container">
+                                <svg width="22" height="22">
+                                    <use href="./icons/sprite.svg#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <div class="totals__item-body">
+                                <p class="totals__item-body-text">This month cash back</p>
+                                <p class="totals__item-body-value">$111</p>
+                            </div>
+                        </li>
+                        <li class="totals__list-item">
+                            <div class="totals__item-icon-container">
+                                <svg width="22" height="22">
+                                    <use href="./icons/sprite.svg#icon-card"></use>
+                                </svg>
+                            </div>
+                            <div class="totals__item-body">
+                                <p class="totals__item-body-text">Available payout</p>
+                                <p class="totals__item-body-value">$111</p>
+                            </div>
 
-                            </li>
-                        </ul>
+                        </li>
+                    </ul>
 
-                        <button class="btn btn-lg btn-blue-white" type="button">add to your account</button>
-                    </div>
+                    <button class="btn btn-lg btn-blue-white" type="button">add to your account</button>
+                </div>
 
             </div>
 
             <div class="cashback-item report">
-                    <div class="report-header">
-                        <h4 class="cashback-item__title">Cash Back Report</h4>
-                        <div class="dropdown">
-                            <button class="btn btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <svg width="15" height="11">
-                                    <use href="./icons/sprite.svg#icon-filter"></use>
-                                </svg>
-                                Column Chooser
+                <div class="report-header">
+                    <h4 class="cashback-item__title">Cash Back Report</h4>
+                    <div class="dropdown">
+                        <button class="btn btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <svg width="15" height="11">
+                                <use href="./icons/sprite.svg#icon-filter"></use>
+                            </svg>
+                            Column Chooser
 
-                            </button>
+                        </button>
 
-                            <ul class="dropdown-menu dropdown-menu-right report-buttons__list" aria-labelledby="dLabel">
-                                <li class="report-buttons__list-item"><button id="reset-btn"
-                                        type="button">reset</button>
-                                </li>
-                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="order"
-                                        type="button">Order</button>
-                                </li>
-                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="open-time"
-                                        type="button">Open&nbsp;time</button></li>
-                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="type"
-                                        type="button">Type</button></li>
-                                <li class="report-buttons__list-item"><button class="filter-btn" data-target="symbol"
-                                        type="button">Symbol</button>
-                                </li>
-                                <li class="report-buttons__list-item"><button class="filter-btn"
-                                        data-target="open-price" type="button">Open&nbsp;Price</button></li>
-                                <li class="report-buttons__list-item"><button class="filter-btn"
-                                        data-target="close-price" type="button">Close&nbsp;Price</button></li>
-                                <li class="report-buttons__list-item"><button class="filter-btn"
-                                        data-target="commissions" type="button">Rebate&nbsp;Commissions</button>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-right report-buttons__list" aria-labelledby="dLabel">
+                            <li class="report-buttons__list-item"><button id="reset-btn" type="button">reset</button>
+                            </li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="order"
+                                    type="button">Order</button>
+                            </li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="open-time"
+                                    type="button">Open&nbsp;time</button></li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="type"
+                                    type="button">Type</button></li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="symbol"
+                                    type="button">Symbol</button>
+                            </li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="open-price"
+                                    type="button">Open&nbsp;Price</button></li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="close-price"
+                                    type="button">Close&nbsp;Price</button></li>
+                            <li class="report-buttons__list-item"><button class="filter-btn" data-target="commissions"
+                                    type="button">Rebate&nbsp;Commissions</button>
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="report-table-wrapper">
+                <div class="report-table-wrapper">
 
-                        <table class="report-table">
-                            <thead class="report-table__header">
-                                <tr>
-                                    <th>Order</th>
-                                    <th>Open&nbsp;time</th>
-                                    <th>Type</th>
-                                    <th>Symbol</th>
-                                    <th>Open&nbsp;Price</th>
-                                    <th>Close&nbsp;Price</th>
-                                    <th>Rebate&nbsp;Commissions</th>
-                                </tr>
+                    <table class="report-table">
+                        <thead class="report-table__header">
+                            <tr>
+                                <th>Order</th>
+                                <th>Open&nbsp;time</th>
+                                <th>Type</th>
+                                <th>Symbol</th>
+                                <th>Open&nbsp;Price</th>
+                                <th>Close&nbsp;Price</th>
+                                <th>Rebate&nbsp;Commissions</th>
+                            </tr>
 
-                            </thead>
+                        </thead>
 
-                            <tbody class="report-table__body">
+                        <tbody class="report-table__body">
 
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
+                            </tr>
 
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            </tr>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            </tr>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            </tr>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            </tr>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            </tr>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                                <tr>
-                                    <td>#390510</td>
-                                    <td>89:43</td>
-                                    <td>Cross</td>
-                                    <td>USDT</td>
-                                    <td>56.50</td>
-                                    <td>56.03</td>
-                                    <td>$120.5</td>
+                            </tr>
+                            <tr>
+                                <td>#390510</td>
+                                <td>89:43</td>
+                                <td>Cross</td>
+                                <td>USDT</td>
+                                <td>56.50</td>
+                                <td>56.03</td>
+                                <td>$120.5</td>
 
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-           
- 
 
  
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"

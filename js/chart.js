@@ -1,114 +1,119 @@
-   const item = document.querySelectorAll('.statistics-filter__list-item')
+const item = document.querySelectorAll('.statistics-filter__list-item')
 
-    function newData() {
-        var sum = {};
+function dataFrom() {
+    var sum = {};
 
-        for (var i = 0; i < item.length; i++) {
-            var li = item[i];
-            var id = li.querySelector(".progress-bar").id;
-            var value = parseFloat(li.querySelector(".statistics-filter__item-value").textContent);
+    for (var i = 0; i < item.length; i++) {
+        var li = item[i];
+        var id = li.querySelector(".progress-bar").id;
+        var value = parseFloat(li.querySelector(".statistics-filter__item-value").textContent);
 
 
-            if (id in sum) {
-                sum[id] += value;
+        if (id in sum) {
+            sum[id] += value;
+        }
+
+        else {
+            sum[id] = value;
+        }
+    }
+    return Object.values(sum)
+}
+
+//Changed color of progress bar//
+document.querySelectorAll('.progress-bar').forEach((el, i) => {
+    const percentages = Array.from(item).map(el => parseFloat(el.querySelector('.statistics-filter__item-value').textContent))
+    el.style.width = `${percentages[i]}%`
+
+
+    //render dependent from id
+    if (el.id === "crypto") {
+        el.style.backgroundColor = "#F44336"
+    }
+
+    if (el.id === "indices") {
+        el.style.backgroundColor = "#811EFF"
+    }
+
+    if (el.id === "forex") {
+        el.style.backgroundColor = "#FFA51E"
+    }
+
+    if (el.id === "shares") {
+        el.style.backgroundColor = "#42A5F5"
+    }
+
+    if (el.id === "metals") {
+        el.style.backgroundColor = "#4CD7AB"
+    }
+
+})
+
+
+ 
+const data = {
+    labels: Array.from(item).map(el => el.querySelector('.statistics-filter__item-text').id),
+
+    datasets: [{
+
+        label: 'most effective instruments',
+        backgroundColor: function () {
+            const data = Array.from(item).map(el => el.querySelector('.statistics-filter__item-text').id)
+            const backgroundColor = []
+
+            if (data.includes('crypto')) {
+                backgroundColor.push("#F44336")
             }
 
-            else {
-                sum[id] = value;
+            if (data.includes('indices')) {
+                backgroundColor.push("#811EFF")
             }
-        }
-        return Object.values(sum)
-    }
+
+            if (data.includes('forex')) {
+                backgroundColor.push("#FFA51E")
+            }
+
+            if (data.includes('shares')) {
+                backgroundColor.push("#42A5F5")
+            }
+
+            if (data.includes('metals')) {
+                backgroundColor.push("#4CD7AB")
+            }
+
+            return backgroundColor
+
+        },
+        data: dataFrom(),
 
 
-    //Changed color of progress bar//
-    document.querySelectorAll('.progress-bar').forEach((el, i) => {
-        const percentages = Array.from(item).map(el => parseFloat(el.querySelector('.statistics-filter__item-value').textContent))
-        el.style.width = `${percentages[i]}%`
+    }],
+}
 
-   
-        //render dependent from id
-        if (el.id === "crypto") {
-            el.style.backgroundColor = "#F44336"
-        }
+const config = {
+    type: 'doughnut',
+    data: data,
+ 
+    options: {
+        cutoutPercentage: 65,
+        responsive: true,
+        maintainAspectRatio: true,
 
-        if (el.id === "indices") {
-            el.style.backgroundColor = "#811EFF"
-        }
+        legend: {
+            display: false
+        },
+     
 
-        if (el.id === "forex") {
-            el.style.backgroundColor = "#FFA51E"
-        }
+      
+    },
 
-        if (el.id === "shares") {
-            el.style.backgroundColor = "#42A5F5"
-        }
+}
 
-        if (el.id === "metals") {
-            el.style.backgroundColor = "#4CD7AB"
-        }
+var ctx = document.getElementById('statistics-chart').getContext('2d');
+var chart = new Chart(ctx, config);
 
-    })
  
 
-    const data = {
-        labels: Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id),
- 
-        datasets: [{
-           
-            label: 'most effective instruments',
-            backgroundColor: function () {
-                const data = Array.from(item).map(el=> el.querySelector('.statistics-filter__item-text').id)
-                const backgroundColor = []
-
-                if (data.includes('crypto')) {
-                    backgroundColor.push("#F44336")
-                }
-
-                if (data.includes('indices')) {
-                    backgroundColor.push("#811EFF")
-                }
-
-                if (data.includes('forex')) {
-                    backgroundColor.push("#FFA51E")
-                }
-
-                if (data.includes('shares')) {
-                    backgroundColor.push("#42A5F5")
-                }
-
-                if (data.includes('metals')) {
-                    backgroundColor.push("#4CD7AB")
-                }
-
-                return backgroundColor
-
-            },
-            data: newData(),
-  
-
-        }],
-    }
-
-    const config = {
-        type: 'doughnut',
-        data: data,
-        options: {
-            cutoutPercentage:65,
-                    responsive: true,
-                    maintainAspectRatio: true,
- 
-                    legend: {
-                        display: false
-                    },
-        
-                },
-    }
- 
-    var ctx = document.getElementById('statistics-chart').getContext('2d');
-    var chart = new Chart(ctx, config);
- 
-  
 
 
-  
+

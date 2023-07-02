@@ -6,66 +6,13 @@ const scrollContainer = document.querySelector('.statistics-filter-wrapper');
 const totalValue = document.querySelector('.totals__list-item:first-child .totals__item-body-value')
 const chartHeading = document.querySelector('.chart-total-heading')
 
-//on handle active filter //
+// //on handle active filter //
 button.addEventListener("click", () => {
     inputGroup.classList.toggle('is-active')
-
-    if (inputGroup.classList.contains('is-active') && filterItem.length > 5) {
-        filterList.style.paddingRight = "15px"
-    }
-
-    if (filterItem.length > 6 && inputGroup.classList.contains('is-active')) {
-        filterList.style.paddingRight = "15px"
-    }
-
-
-    if (filterItem.length === 6 && !inputGroup.classList.contains('is-active')) {
-        filterList.style.paddingRight = "0"
-    }
-
-
     scrollContainer.classList.toggle('is-active')
 
 })
 
-//check if item more than 6 do something.. //
-if (filterItem.length > 6) {
-    filterList.style.paddingRight = "15px"
-} else {
-    filterList.style.paddingRight = "0"
-}
-
-//correction on mobile//
-if (window.innerWidth <= 575) {
- 
-    button.addEventListener("click", () => {
-    if (inputGroup.classList.contains('is-active') && filterItem.length >= 5) {
-        filterList.style.paddingRight = "15px"
-    }
-
-    if (filterItem.length >= 4 && inputGroup.classList.contains('is-active')) {
-        filterList.style.paddingRight = "15px"
-    }
-
-
-    if (filterItem.length === 6 && !inputGroup.classList.contains('is-active')) {
-        filterList.style.paddingRight = "15px"
-    }
-
-    
-    if (!inputGroup.classList.contains('is-active') && filterItem.length === 4 ) {
-        filterList.style.paddingRight = "0"
-    }
-
-    })
-
-    if (filterItem.length >= 5) {
-        filterList.style.paddingRight = "15px"
-    } else {
-        filterList.style.paddingRight = "0"
-    }
-
-}
 
 //debounce //
 const debounce = (fn, ms) => {
