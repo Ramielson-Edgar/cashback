@@ -385,11 +385,6 @@ h4 {
   text-transform: capitalize;
 }
 
-.filter-control:-ms-input-placeholder {
-  color: #c3c3c3;
-  text-transform: capitalize;
-}
-
 .filter-control::placeholder {
   color: #c3c3c3;
   text-transform: capitalize;
@@ -455,7 +450,7 @@ h4 {
 }
 @media (max-width: 991.98px) {
   .report-table__header tr th,
-.report-table__body tr td {
+  .report-table__body tr td {
     font-size: 14px;
     line-height: 20px;
     padding: 10px 20px;
@@ -499,7 +494,7 @@ h4 {
     border-left: unset;
   }
   .totals__item-body-value,
-.totals__item-body-text {
+  .totals__item-body-text {
     font-size: 13px;
   }
   .cashback-item__title {

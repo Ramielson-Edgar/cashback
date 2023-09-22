@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+$blue-100: #f9fcfe;
+$blue-500: #42a5f5;
+$blue-600: #f9faff;
+
+$grey-100: #fafafa;
+$grey-500: #d9d9d9;
+
+$dark-100: #c3c3c3;
+$dark-200: #a4a4a4;
+$dark-300: #4b4b4b;
+$dark-500: #232323;
+
+$white: #fff;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $dark-500;
+  background-color: $blue-600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+
+
+.text-bold {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+.cashback-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  margin-top: 0;
+  padding-left: 30px;
+  background: #fff
+}
+
+
+
+.cashback-header__title {
+  font-size: 20px;
+  line-height: 1.1;
+  text-transform: capitalize;
+}
+
+.cashback-item {
+  background: $white;
+  border-radius: 33px;
+ 
+}
+
+.cashback-item.current-month {
+  overflow: hidden;
+  height: 500px;
+  margin-bottom: 10px;
+}
+
+.cashback-item.report {
+  overflow: hidden;
+  height: 500px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table-container {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  height: calc(100% - 70px - 50px);
+  width: 100%;
+}
+
+
+.table-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.table-container::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid #1C274C;
+}
+
+.table-container::-webkit-scrollbar:horizontal{
+  height: 5px;
+}
+
+
+.table-container {
+  padding: 0 30px 0 30px;
+}
+
+ 
+
+.table .table__title,
+.table .table__text {
+  white-space: nowrap;
+}
+
+.table .table__row th:not(:last-child),
+.table .table__row td:not(:last-child) {
+  border-right: 1px solid #D9D9D9;
+}
+
+.table .table__header {
+  padding: 16px 0;
+  border-top: 1px solid #D9D9D9;
+}
+
+.table .table__header .table__row .table__title {
+  border-bottom: unset;
+}
+
+.table .table__header .table__row {
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.table .table__header .table__title {
+  padding: 15px;
+  width: 25%;
+}
+
+.table .table__body .table__row:nth-child(odd) {
+  background-color: #FDFDFF;
+}
+
+.table .table__text {
+  padding: 15px;
+}
+
+.cashback-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50px;
+
+  padding: 10px 100px 10px 30px;
+  background: #EDEDED;
+}
+
+.cashback-footer__text {
+  margin-bottom: 0;
+}
+
+.cashback-footer__total {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+
+//TEST CSS
+.inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+ }
+ 
+  
+ .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+   width: 250px;
+   background: #1C274C;
+ }
+ 
+ .content {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex: 1 1 0;
+   padding: 15px;
+ }
+
+@media (max-width:767px) {
+  .table .table__title {
+    padding: 10px;
+  }
+  
+  .table-container {
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    
+   }
+  
+   .sidebar {
+    display: none;
+   }
+}
+
+@media (max-width:575px) {
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .page-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .cashback-header__title,
+  .cashback-footer__total {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .table-container {
+    padding: unset;
+  }
+ 
+  .cashback-footer {
+    padding: 10px 30px 10px 10px;
+  }
+}
+
+
+
+ 
